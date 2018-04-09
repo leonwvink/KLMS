@@ -1,0 +1,31 @@
+# Read me
+
+First setup:
+Restaurant, room booking
+
+CHANGING PRIORITIES
+ON WEEKLY BASIS (Sprints, every week presentations)
+
+Requirements:
+Guest enters restaurant -> QR code on card -> go to menu -> order online -> To kitchen and bar (seperate drinks) (priority: 1, within 2 weeks)
+Place orders with tablet
+Look at ingredients used
+Cost Price calculation -> advise for selling price -> uplift of 65% normal ingredients, 85% on drinks
+System for table reservation (40 people) -> room reservation
+Checking in, checking out
+System for payment -> online payment, worried about the tips -> needs to be an option but not the standard way -> Charge it to the room possiblity
+
+BILINGUAL WEBSITE (English & Italian)
+
+MENU:
+Starters,
+Dishes,
+Drinks,
+Combined menus,
+List of ingredients
+
+INGREDIENTS
+Bought on market/provider
+
+
+FEEDBACK:: Don't make promises to quick. 

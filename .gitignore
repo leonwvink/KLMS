@@ -1,4 +1,6 @@
-
-*.xml
 .idea/misc.xml
 KLMS.iml
+.idea/workspace.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/vcs.xml

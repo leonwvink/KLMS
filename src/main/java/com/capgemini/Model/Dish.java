@@ -1,6 +1,4 @@
-package models;
-
-import java.util.ArrayList;
+package com.capgemini.Model;
 
 public class Dish {
     private String name;

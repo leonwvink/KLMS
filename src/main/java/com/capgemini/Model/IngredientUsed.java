@@ -1,4 +1,4 @@
-package models;
+package com.capgemini.Model;
 
 public class IngredientUsed {
     private String name;

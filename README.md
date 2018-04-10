@@ -1,2 +1,0 @@
-# KLMS
-Project Java Course

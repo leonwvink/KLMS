@@ -7,5 +7,7 @@ public class Dish {
     private int itemNumber;
     private double price;
     private boolean vegetarian;
-    private ArrayList<IngredientUsed> ingredientList;
+    private IngredientUsed[] ingredientList;
+    private String type; //Dessert, Starter, Main
+
 }

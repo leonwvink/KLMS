@@ -6,6 +6,6 @@ public class Menu {
     private double price;
     private String name;
     private int itemNumber;
-    private ArrayList<Dish> menuItems;
+    private Dish[] menuItems;
     private boolean vegetarian;
 }

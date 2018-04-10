@@ -11,9 +11,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-
-        Table table = new Table();
+        Table table = new Table(1);
         Order order = new Order();
 
     }

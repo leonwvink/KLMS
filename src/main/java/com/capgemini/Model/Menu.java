@@ -36,6 +36,4 @@ public class Menu {
     public void setMenuItems(MenuItem[] menuItems) {
         this.menuItems = menuItems;
     }
-
-
 }

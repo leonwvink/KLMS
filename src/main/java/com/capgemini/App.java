@@ -37,12 +37,32 @@ public class App
 
         Menu drink = new Menu("Drinks", 1);
         Menu starter = new Menu("Starters", 2);
-        Menu Main = new Menu("Main", 3);
-        Menu Dessert = new Menu("Desserts", 4);
-        Menu Combo = new Menu("Action Menus", 5);
+        Menu main = new Menu("Main", 3);
+        Menu dessert = new Menu("Desserts", 4);
+        Menu combo = new Menu("Action Menus", 5);
 
-        drink.setMenuItems([cola, fanta, sprite], );
+        MenuItem[] drinks = {cola, fanta, sprite};
+        MenuItem[] starters = {salade, soep};
+        MenuItem[] mains = {lasagne, pasta, spagetti};
+        MenuItem[] desserts = {ijs, taart};
+        MenuItem[] combos = {menu1, menu2};
+
+        drink.setMenuItems(drinks);
+        starter.setMenuItems(starters);
+        main.setMenuItems(mains);
+        dessert.setMenuItems(desserts);
+        combo.setMenuItems(combos);
+
+        for (int i=0 ; i <= drink.getMenuItems().length; i++) {
+            System.out.println("Drinks" + drink.get);
+        }
+
+
+
+
     }
+
+
 
 
 }

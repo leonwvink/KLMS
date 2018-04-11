@@ -4,17 +4,15 @@ public class MenuItem {
 
     private int itemNumber;
     private String name;
-    private int foodType; // starter, main, dessert, Drink, combined menu
+    private EFoodType foodType; // starter, main, dessert, Drink, combined menu
     private double price;
-    private String[] ingredient = new String[5];
 
 
-    public MenuItem(int itemNumber, String name, int foodType, double price, boolean veggy) {
+    public MenuItem(int itemNumber, String name, EFoodType foodType, double price) {
         this.itemNumber = itemNumber;
         this.name = name;
         this.foodType = foodType;
         this.price = price;
-        this.ingredient = ingredient;
     }
 
     public int getItemNumber() {
@@ -33,11 +31,11 @@ public class MenuItem {
         this.name = name;
     }
 
-    public int getFoodType() {
+    public EFoodType getFoodType() {
         return foodType;
     }
 
-    public void setFoodType(int foodType) {
+    public void setFoodType(EFoodType foodType) {
         this.foodType = foodType;
     }
 
@@ -49,11 +47,4 @@ public class MenuItem {
         this.price = price;
     }
 
-    public String[] getIngredient() {
-        return ingredient;
-    }
-
-    public void setIngredient(String[] ingredient) {
-        this.ingredient = ingredient;
-    }
 }

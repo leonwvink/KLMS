@@ -18,12 +18,12 @@ public class MenuCard {
     }
 
     public void addMenuItemToMenuCard(MenuItem menuItem) {
-        if (!listContains(menuItem, this.menuCardList)) {
+        if (listContains(menuItem, this.menuCardList)) {
+            System.out.println(menuItem.getName() + " was already on the Menucard");
+        } else {
             MenuItem[] newList = addMenuItemToList(menuItem, this.menuCardList);
             this.menuCardList = newList;
-                        // System.out.println(menuItem.getName() + "is added to the Menucard");
-        } else {
-            System.out.println(menuItem.getName() + " was already on the Menucard");
+            // System.out.println(menuItem.getName() + "is added to the Menucard");
         }
     }
 

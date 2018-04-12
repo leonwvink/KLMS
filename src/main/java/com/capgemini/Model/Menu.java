@@ -27,7 +27,7 @@ public class Menu extends MenuItem {
     }
 
     @Override
-    public void printMenuDetails(){
+    public void  printMenuDetails(){
         super.printMenuDetails();
         if (this.menuItems != null) {
             System.out.format("%23s","Consists of: "); //23 is 13 + 10 so it will start at the right place (13 is number of characters in Consists of:

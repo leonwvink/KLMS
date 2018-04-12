@@ -6,7 +6,6 @@ public class MenuItem {
     private String name;
     private EFoodType foodType; // starter, main, dessert, Drink, combined menu
     private double price;
-    private double advisePrice;
 
 
     public MenuItem(int itemNumber, String name, EFoodType foodType, double price) {
@@ -49,7 +48,7 @@ public class MenuItem {
     }
 
     public void printMenuDetails(){
-        System.out.format("%-10s%-70s%-2s%-5.2f \n",getItemNumber(), getName(), "€", getPrice());
+        System.out.format("%-10s%-70s%-2s%-7.2f \n",getItemNumber(), getName(), "€", getPrice());
         //- means left align, numbers mean characters, the size will fill out completly the .2f gives two
         // numbers behind the comma
     }

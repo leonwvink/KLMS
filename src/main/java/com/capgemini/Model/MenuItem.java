@@ -47,4 +47,8 @@ public class MenuItem {
         this.price = price;
     }
 
+    public void printMenuDetails(){
+        System.out.format("%-10s%-70s%-2s%-5s \n",getItemNumber(), getName(), "€", getPrice()); //- means left align, numbers mean characters, the size will fill out completly
+    }
+
 }

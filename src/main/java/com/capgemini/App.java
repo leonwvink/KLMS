@@ -11,12 +11,12 @@ public class App {
         Table table = new Table(1);
         Order order = new Order();
         makeMenuData();
-
-
     }
 
 
     public static void makeMenuData() {
+        MenuCard menuCard = new MenuCard();
+
         Drink cola = new Drink(1, "cola", EFoodType.Drink, 3);
         Drink fanta = new Drink(2, "fanta", EFoodType.Drink, 3);
         Drink sprite = new Drink(3, "sprite", EFoodType.Drink, 3);
@@ -27,10 +27,28 @@ public class App {
         Dish spagetti = new Dish(8, "spagetti", EFoodType.Main, 3, true);
         Dish ijs = new Dish(9, "ijs", EFoodType.Dessert, 3, true);
         Dish taart = new Dish(10, "taart", EFoodType.Dessert, 3, true);
-        Menu menu1 = new Menu(11, "salade, pasta, taart", EFoodType.Menu, 3, false);
-        Menu menu2 = new Menu(12, "soep, lasagne, ijs", EFoodType.Menu, 3, true);
+        MenuItem[] menu1Items ={salade, pasta,taart};
+        MenuItem[] menu2Items = {soep, lasagne,ijs };
+        Menu menu1 = new Menu(11, "Menu 1", EFoodType.Menu, 3, false, menu1Items);
+        Menu menu2 = new Menu(12, "Menu 2", EFoodType.Menu, 3, true, menu2Items);
 
-        System.out.println("The "+ cola.getFoodType().getType() + " " + cola.getName() + " costs " + cola.getPrice());
+        String [] ingredientString ={"pasta", "salt"};
+        lasagne.setIngredient(ingredientString);
+
+        menuCard.addMenuItemToMenuCard(cola);
+        menuCard.addMenuItemToMenuCard(fanta);
+        menuCard.addMenuItemToMenuCard(soep);
+        menuCard.addMenuItemToMenuCard(lasagne);
+        menuCard.addMenuItemToMenuCard(ijs);
+        menuCard.addMenuItemToMenuCard(menu1);
+        menuCard.addMenuItemToMenuCard(menu1);
+
+
+        menuCard.generateMenuCard();
+
+
+
+
     }
 
 

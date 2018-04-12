@@ -4,9 +4,10 @@ public class Menu extends MenuItem {
     private MenuItem[] menuItems;
     private boolean veg;
 
-    public Menu(int itemNumber, String name, EFoodType foodType, double price, boolean veg) {
+    public Menu(int itemNumber, String name, EFoodType foodType, double price, boolean veg, MenuItem[] menuItems) {
         super(itemNumber, name, foodType, price);
         this.veg = veg;
+        this.menuItems=menuItems;
     }
 
     public boolean isVeg() {
@@ -23,5 +24,18 @@ public class Menu extends MenuItem {
 
     public void setMenuItems(MenuItem[] menuItems) {
         this.menuItems = menuItems;
+    }
+
+    @Override
+    public void printMenuDetails(){
+        super.printMenuDetails();
+        if (this.menuItems != null) {
+            System.out.format("%23s","Consists of: "); //23 is 13 + 10 so it will start at the right place (13 is number of characters in Consists of:
+            for (int i = 0; i < this.menuItems.length-1; i++) {
+                System.out.print(this.menuItems[i].getName() + ", ");
+            }
+            System.out.print(this.menuItems[this.menuItems.length - 1].getName());
+            System.out.println(" ");
+        }
     }
 }

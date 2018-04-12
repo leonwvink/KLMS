@@ -1,17 +1,11 @@
 package com.capgemini.Model;
 
-import java.sql.Time;
-import java.util.Date;
 
 public class Billing {
 
-   private String invoiceID;
-   private double grandTotal;
-   private boolean billPaid;
-
-    public Billing() {
-    }
-
+    private String invoiceID;
+    private double grandTotal;
+    private boolean billPaid;
 
     public Billing(String invoiceID, double grandTotal, boolean billPaid) {
         this.invoiceID = invoiceID;
@@ -19,19 +13,12 @@ public class Billing {
         this.billPaid = billPaid;
     }
 
-    public void billNotPaid(){
-        billPaid = false;
-
+    public String getInvoiceID() {
+        return invoiceID;
     }
 
-    public void addServiceTax(){
-        grandTotal = (grandTotal * 10 / 100) + 50;
-    }
-
-    public void discountedBill(){
-        grandTotal = grandTotal - (grandTotal *15/100);
-
-
+    private void setInvoiceID(String invoiceID) {
+        this.invoiceID = invoiceID;
     }
 
     public double getGrandTotal() {

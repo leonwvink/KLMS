@@ -9,6 +9,7 @@ public enum EFoodType {
 
     private String type;
 
+
     EFoodType(String type) {
         this.type = type;
     }

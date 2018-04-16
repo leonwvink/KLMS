@@ -49,7 +49,7 @@ public class MenuItem {
 
     public void printMenuDetails(){
         System.out.format("%-10s%-70s%-2s%-7.2f \n",getItemNumber(), getName(), "€", getPrice());
-        //- means left align, numbers mean characters, the size will fill out completly the .2f gives two
+        //- means left align, numbers mean characters, the size will fill out completely the .2f gives two
         // numbers behind the comma
     }
 

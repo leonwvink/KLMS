@@ -47,17 +47,16 @@ public class App {
         Menu menu2 = new Menu(12, "Menu 2", EFoodType.Menu, 3, true, menu2Items);
 
 
-        //String [] ingredientString ={"pasta", "salt"};
-        //lasagne.setIngredient(ingredientString);
-
         menuCard.addMenuItemToMenuCard(cola);
         menuCard.addMenuItemToMenuCard(fanta);
         menuCard.addMenuItemToMenuCard(soep);
         menuCard.addMenuItemToMenuCard(lasagne);
         menuCard.addMenuItemToMenuCard(ijs);
         menuCard.addMenuItemToMenuCard(menu1);
-        menuCard.addMenuItemToMenuCard(menu1);
-
+//        menuCard.addMenuItemToMenuCard(menu1);
+    menuCard.addMenuItemToMenuCard(salade);
+    menuCard.addMenuItemToMenuCard(taart);
+    menuCard.addMenuItemToMenuCard(pasta);
 
         menuCard.generateMenuCard();
 

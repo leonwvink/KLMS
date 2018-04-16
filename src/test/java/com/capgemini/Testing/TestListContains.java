@@ -18,37 +18,37 @@ public class TestListContains {
     private static MenuItem[] testDishList;
 
     @BeforeClass
-    public static void setup(){
+    public static void setup() {
         testMenuCard = new MenuCard();
         Ingredient testIngredient1 = new Ingredient("testIngredient1", 1);
-        Ingredient testIngredient2 = new Ingredient("testIngredient2",2);
+        Ingredient testIngredient2 = new Ingredient("testIngredient2", 2);
         Ingredient[] testIngredientEmptyList = {};
-        Ingredient[] testIngredientFilledList ={testIngredient1,testIngredient2};
-        testStarterEmptyIngredients = new Dish(1,"testDish", EFoodType.Starter,1,false, testIngredientEmptyList);
-        testStarterFilledIngredients = new Dish(2, "testDish2", EFoodType.Starter,1,false,testIngredientFilledList);
-        testMainFilledIngredients = new Dish(3,"TestDish3", EFoodType.Main,1,false,testIngredientFilledList);
-        testDrink = new Drink(4,"testDrink",EFoodType.Drink,2);
-        MenuItem[] testDishListEmpty ={};
-        testDishList = new MenuItem[]{testMainFilledIngredients,testStarterEmptyIngredients, testDrink};
-        testCombinedMenu = new Menu(5,"TestMenu1", EFoodType.Menu,1,false,testDishList);
-        testEmptyCombinedMenu = new Menu (6,"TestMenu2", EFoodType.Menu,1, false,testDishListEmpty);
+        Ingredient[] testIngredientFilledList = {testIngredient1, testIngredient2};
+        testStarterEmptyIngredients = new Dish(1, "testDish", EFoodType.Starter, 1, false, testIngredientEmptyList);
+        testStarterFilledIngredients = new Dish(2, "testDish2", EFoodType.Starter, 1, false, testIngredientFilledList);
+        testMainFilledIngredients = new Dish(3, "TestDish3", EFoodType.Main, 1, false, testIngredientFilledList);
+        testDrink = new Drink(4, "testDrink", EFoodType.Drink, 2);
+        MenuItem[] testDishListEmpty = {};
+        testDishList = new MenuItem[]{testMainFilledIngredients, testStarterEmptyIngredients, testDrink};
+        testCombinedMenu = new Menu(5, "TestMenu1", EFoodType.Menu, 1, false, testDishList);
+        testEmptyCombinedMenu = new Menu(6, "TestMenu2", EFoodType.Menu, 1, false, testDishListEmpty);
     }
 
     @Test
-    public void testListContainsForEmptyList(){
+    public void testListContainsForEmptyList() {
         boolean result = testMenuCard.listContains(testStarterEmptyIngredients, menuItems);
-        assertEquals(false,result);
+        assertEquals(false, result);
     }
 
     @Test
-    public void testListContainsForFilledListButNewItem(){
-        boolean result = testMenuCard.listContains(testStarterFilledIngredients,testDishList);
-        assertEquals(false,result);
+    public void testListContainsForFilledListButNewItem() {
+        boolean result = testMenuCard.listContains(testStarterFilledIngredients, testDishList);
+        assertEquals(false, result);
     }
 
     @Test
-    public void testListContainsForFilledListWithExistingItem(){
-        boolean result = testMenuCard.listContains(testMainFilledIngredients,testDishList);
-        assertEquals(true,result);
+    public void testListContainsForFilledListWithExistingItem() {
+        boolean result = testMenuCard.listContains(testMainFilledIngredients, testDishList);
+        assertEquals(true, result);
     }
 }

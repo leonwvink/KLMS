@@ -19,11 +19,11 @@ public class MenuCard {
 
     public void addMenuItemToMenuCard(MenuItem menuItem) {
         if (listContains(menuItem, this.menuCardList)) {
-            System.out.println(menuItem.getName() + " was already on the Menucard");
+            System.out.println(menuItem.getName() + " was already on the Menu card");
         } else {
             MenuItem[] newList = addMenuItemToList(menuItem, this.menuCardList);
             this.menuCardList = newList;
-            // System.out.println(menuItem.getName() + "is added to the Menu card");
+            // System.out.println(menuItem.getName() + "is added to the CompoundMenu card");
         }
     }
 

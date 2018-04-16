@@ -49,9 +49,9 @@ public class App {
         MenuItem[] menu1Items = {salade, pasta,taart};
         MenuItem[] menu2Items = {soep, lasagne,ijs };
         MenuItem[] menu3Items = {salade, pasta, cola, taart};
-        Menu menu1 = new Menu(11, "Menu 1", EFoodType.Menu, 3, false, menu1Items);
-        Menu menu2 = new Menu(12, "Menu 2", EFoodType.Menu, 3, true, menu2Items);
-        Menu menu3 = new Menu(13, "Menu 3", EFoodType.Menu,7.5,true,menu3Items);
+        CompoundMenu compoundMenu1 = new CompoundMenu(11, "Compound Menu 1", EFoodType.Menu, 3, false, menu1Items);
+        CompoundMenu compoundMenu2 = new CompoundMenu(12, "Compound Menu 2", EFoodType.Menu, 3, true, menu2Items);
+        CompoundMenu compoundMenu3 = new CompoundMenu(13, "Compound Menu 3", EFoodType.Menu,7.5,true,menu3Items);
         //String [] ingredientString ={"pasta", "salt"};
         //lasagne.setIngredient(ingredientString);
 
@@ -60,8 +60,8 @@ public class App {
         menuCard.addMenuItemToMenuCard(soep);
         menuCard.addMenuItemToMenuCard(lasagne);
         menuCard.addMenuItemToMenuCard(ijs);
-        menuCard.addMenuItemToMenuCard(menu1);
-        menuCard.addMenuItemToMenuCard(menu3);
+        menuCard.addMenuItemToMenuCard(compoundMenu1);
+        menuCard.addMenuItemToMenuCard(compoundMenu3);
 
 
         menuCard.generateMenuCard();

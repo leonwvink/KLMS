@@ -1,10 +1,10 @@
 package com.capgemini.Model;
 
-public class CompoundMenu extends MenuItem {
+public class Menu extends MenuItem {
     private MenuItem[] menuItems;
     private boolean veg;
 
-    public CompoundMenu(int itemNumber, String name, EFoodType foodType, double price, boolean veg, MenuItem[] menuItems) {
+    public Menu(int itemNumber, String name, EFoodType foodType, double price, boolean veg, MenuItem[] menuItems) {
         super(itemNumber, name, foodType, price);
         this.veg = veg;
         this.menuItems=menuItems;

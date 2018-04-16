@@ -30,8 +30,8 @@ public class TestListContains {
         testDrink = new Drink(4, "testDrink", EFoodType.Drink, 2);
         MenuItem[] testDishListEmpty = {};
         testDishList = new MenuItem[]{testMainFilledIngredients, testStarterEmptyIngredients, testDrink};
-        testCombinedMenu = new CompoundMenu(5, "TestMenu1", EFoodType.Menu, 1, false, testDishList);
-        testEmptyCombinedMenu = new CompoundMenu(6, "TestMenu2", EFoodType.Menu, 1, false, testDishListEmpty);
+        testCombinedMenu = new Menu(5, "TestMenu1", EFoodType.Menu, 1, false, testDishList);
+        testEmptyCombinedMenu = new Menu(6, "TestMenu2", EFoodType.Menu, 1, false, testDishListEmpty);
     }
 
     @Test

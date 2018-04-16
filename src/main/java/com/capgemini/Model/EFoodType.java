@@ -4,7 +4,7 @@ public enum EFoodType {
     Starter("Starter"),
     Main("Main Dishes"),
     Dessert("Desserts"),
-    Menu("Compound Menus"),
+    Menu("Combined Menus"),
     Drink("Drinks");
 
     private String type;

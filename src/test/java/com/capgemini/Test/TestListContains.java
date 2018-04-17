@@ -1,4 +1,4 @@
-package com.capgemini.Testing;
+package com.capgemini.Test;
 
 import com.capgemini.Model.*;
 import org.junit.BeforeClass;

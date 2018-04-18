@@ -2,6 +2,8 @@ package com.capgemini;
 
 import com.capgemini.Model.*;
 
+import java.util.HashMap;
+
 /**
  * Hello world!
  *
@@ -18,24 +20,32 @@ public class App {
 
     public static void makeMenuData() {
         MenuCard menuCard = new MenuCard();
-        Ingredient cheese = new Ingredient("cheese", 1);
-        Ingredient meat = new Ingredient("meat",1);
-        Ingredient dough = new Ingredient("dough",1);
-        Ingredient lettuce = new Ingredient("lettuce", 1);
-        Ingredient tomato = new Ingredient("tomato", 1);
-        Ingredient chocolate = new Ingredient("chocolate", 1);
-        Ingredient apple = new Ingredient("apple", 1);
-        Ingredient salmon = new Ingredient("salmon",3);
-        Ingredient sugar = new Ingredient("sugar",0.10);
-        Ingredient rice = new Ingredient("rice",0.20);
-        Ingredient[] ingredientLasagne = {cheese, meat, dough};
-        Ingredient[] ingredientSalade = {lettuce, tomato};
-        Ingredient[] ingredientSalmon = {salmon,sugar, rice};
-        Ingredient[] ingredientSoep = {tomato};
-        Ingredient[] ingredientPasta = {cheese, tomato, meat};
-        Ingredient[] ingredientSpagetti = {cheese, tomato, dough};
-        Ingredient[] ingredientIjs = {chocolate};
-        Ingredient[] ingredientTaart = {apple, dough};
+        Ingredient cheese = new Ingredient("cheese", 1, 10);
+        Ingredient meat = new Ingredient("meat", 1, 10);
+        Ingredient dough = new Ingredient("dough", 1, 10);
+        Ingredient lettuce = new Ingredient("lettuce", 1, 10);
+        Ingredient tomato = new Ingredient("tomato", 1, 10);
+        Ingredient chocolate = new Ingredient("chocolate", 1, 10);
+        Ingredient apple = new Ingredient("apple", 1, 10);
+        Ingredient salmon = new Ingredient("salmon", 3, 10);
+        Ingredient sugar = new Ingredient("sugar", 0.10, 10);
+        Ingredient rice = new Ingredient("rice", 0.20, 10);
+
+        HashMap<Ingredient, Integer> ingredientLasagne = new HashMap<Ingredient, Integer>();
+        ingredientLasagne.put(cheese, 10);
+        ingredientLasagne.put(meat, 100);
+        ingredientLasagne.put(dough, 50);
+
+        HashMap<Ingredient, Integer> ingredientSalade = new HashMap<Ingredient, Integer>();
+        ingredientSalade.put(lettuce, 10);
+        ingredientSalade.put(tomato, 10);
+
+        HashMap<Ingredient, Integer> ingredientSalmon = new HashMap<Ingredient, Integer>();
+        HashMap<Ingredient, Integer> ingredientSoep = new HashMap<Ingredient, Integer>();
+        HashMap<Ingredient, Integer> ingredientPasta = new HashMap<Ingredient, Integer>();
+        HashMap<Ingredient, Integer> ingredientSpagetti = new HashMap<Ingredient, Integer>();
+        HashMap<Ingredient, Integer> ingredientIjs = new HashMap<Ingredient, Integer>();
+        HashMap<Ingredient, Integer> ingredientTaart = new HashMap<Ingredient, Integer>();
 
         Drink cola = new Drink(1, "cola", EFoodType.Drink, 3);
         Drink fanta = new Drink(2, "fanta", EFoodType.Drink, 3);

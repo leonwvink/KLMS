@@ -6,6 +6,7 @@ public class MenuItem {
     private String name;
     private EFoodType foodType; // starter, main, dessert, Drink, combined menu
     private double price;
+    private double advisePrice;
 
 
     public MenuItem(int itemNumber, String name, EFoodType foodType, double price) {

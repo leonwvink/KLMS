@@ -30,6 +30,17 @@ public class Dish extends MenuItem {
         this.ingredient = ingredient;
     }
 
+    public void dishCostPrice(){
+        double temporary = 0.0;
+        for (int c = 0 ; c < ingredient.length; c++){
+            temporary = temporary + ingredient[c].getPrice();
+
+        }
+        super.setPrice(temporary);
+        System.out.println(temporary);
+    }
+
+
     @Override
     public void printMenuDetails() {            //THIS FUNCTION ASSUMES THAT INGREDIENTS ARE INPUT AS A STRING
         super.printMenuDetails();

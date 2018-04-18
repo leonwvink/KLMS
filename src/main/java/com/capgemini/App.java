@@ -47,8 +47,7 @@ public class App {
         Menu menu2 = new Menu(12, "Menu 2", EFoodType.Menu, 3, true, menu2Items);
 
 
-        //String [] ingredientString ={"pasta", "salt"};
-        //lasagne.setIngredient(ingredientString);
+
 
         menuCard.addMenuItemToMenuCard(cola);
         menuCard.addMenuItemToMenuCard(fanta);
@@ -59,12 +58,33 @@ public class App {
         menuCard.addMenuItemToMenuCard(menu1);
 
 
-        menuCard.generateMenuCard();
+        Order order = new Order();
+        OrderItem first = new OrderItem(1, cola);
+        OrderItem second = new OrderItem(1, cola);
+
+        order.addToOrder(first);
+        order.addToOrder(second);
+
+
+
+
+
+
+        //menuCard.generateMenuCard();
+        //order.generateOrder();
+
+        Print printing = new Print();
+        printing.generateOrder();
+        printing.generateMenuCard();
+
+
 
 
 
 
     }
+
+
 
 
 

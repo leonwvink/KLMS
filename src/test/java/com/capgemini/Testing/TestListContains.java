@@ -1,6 +1,7 @@
 package com.capgemini.Testing;
 
 import com.capgemini.Model.*;
+import com.capgemini.View.MenuCard;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

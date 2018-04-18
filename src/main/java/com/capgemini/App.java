@@ -1,6 +1,8 @@
 package com.capgemini;
 
+import com.capgemini.Controller.MenuCardController;
 import com.capgemini.Model.*;
+import com.capgemini.View.MenuCard;
 
 /**
  * Hello world!
@@ -55,16 +57,9 @@ public class App {
         //String [] ingredientString ={"pasta", "salt"};
         //lasagne.setIngredient(ingredientString);
 
-        menuCard.addMenuItemToMenuCard(cola);
-        menuCard.addMenuItemToMenuCard(fanta);
-        menuCard.addMenuItemToMenuCard(soep);
-        menuCard.addMenuItemToMenuCard(lasagne);
-        menuCard.addMenuItemToMenuCard(ijs);
-        menuCard.addMenuItemToMenuCard(compoundMenu1);
-        menuCard.addMenuItemToMenuCard(compoundMenu3);
+        MenuCardController menuCardController = new MenuCardController();
 
-
-        menuCard.generateMenuCard();
+        menuCardController.addMenuItemToMenuCard(ijs);
 
 
 

@@ -3,12 +3,13 @@ package com.capgemini.Model;
 public class Ingredient {
 
     private String name;
-    private double price;
+    private double pricePerGram;
+    private int quantityInStorageInKiloGram;
 
-
-    public Ingredient(String name, double price) {
+    public Ingredient(String name, double pricePerGram, int quantityInStorageInKiloGram) {
         this.name = name;
-        this.price = price;
+        this.pricePerGram = pricePerGram;
+        this.quantityInStorageInKiloGram = quantityInStorageInKiloGram;
     }
 
     public String getName() {
@@ -19,11 +20,19 @@ public class Ingredient {
         this.name = name;
     }
 
-    public double getPrice() {
-        return this.price;
+    public double getPricePerGram() {
+        return this.pricePerGram;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setPricePerGram(double pricePerGram) {
+        this.pricePerGram = pricePerGram;
+    }
+
+    public int getQuantityInStorageInKiloGram() {
+        return quantityInStorageInKiloGram;
+    }
+
+    public void setQuantityInStorageInKiloGram(int quantityInStorageInKiloGram) {
+        this.quantityInStorageInKiloGram = quantityInStorageInKiloGram;
     }
 }

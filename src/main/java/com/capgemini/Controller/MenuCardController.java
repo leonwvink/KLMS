@@ -1,20 +1,21 @@
-package com.capgemini.Model;
+package com.capgemini.Controller;
 
-public class MenuCard {
+import com.capgemini.Model.MenuItem;
+import com.capgemini.View.MenuCard;
+
+public class MenuCardController {
+
+    private MenuCard view = new MenuCard();
     private MenuItem[] menuCardList;
 
-    public void generateMenuCard() {
-        System.out.println("Menu <Name of Restaurant>");
-        System.out.println(" ");
-        for (EFoodType type : EFoodType.values()) {
-            System.out.println(type.getType());
-            for(MenuItem item: this.menuCardList){
-                if (type == item.getFoodType()) {
-                    item.printMenuDetails();
-                    System.out.println(" ");
-                }
-            }
-        }
+    public MenuCardController(){}
+
+    private void updateView(){
+        view.generateMenuCard(this.menuCardList);
+    }
+
+    public void getMenuCard(){
+        updateView();
     }
 
     public void addMenuItemToMenuCard(MenuItem menuItem) {
@@ -41,7 +42,7 @@ public class MenuCard {
         }
     }
 
-    public boolean listContains(MenuItem menuItem, MenuItem[] itemList) {
+    private boolean listContains(MenuItem menuItem, MenuItem[] itemList) {
         if (itemList == null) {
             return false;
         }
@@ -68,5 +69,4 @@ public class MenuCard {
         return newList;
 
     }
-
 }

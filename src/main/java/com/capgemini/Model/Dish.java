@@ -35,7 +35,7 @@ public class Dish extends MenuItem {
     public void dishCostPrice(){
         double temporary = 0.0;
         for (int c = 0 ; c < ingredient.length; c++){
-            temporary = temporary + ingredient[c].getPrice();
+            temporary = temporary + ingredient[c].getPricePerGram();
 
         }
         super.setPrice(temporary);

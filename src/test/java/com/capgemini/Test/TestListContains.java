@@ -1,8 +1,10 @@
-package com.capgemini.Testing;
+package com.capgemini.Test;
 
 import com.capgemini.Model.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,10 +22,12 @@ public class TestListContains {
     @BeforeClass
     public static void setup() {
         testMenuCard = new MenuCard();
-        Ingredient testIngredient1 = new Ingredient("testIngredient1", 1);
-        Ingredient testIngredient2 = new Ingredient("testIngredient2", 2);
-        Ingredient[] testIngredientEmptyList = {};
-        Ingredient[] testIngredientFilledList = {testIngredient1, testIngredient2};
+        Ingredient testIngredient1 = new Ingredient("testIngredient1", 1,  100);
+        Ingredient testIngredient2 = new Ingredient("testIngredient2", 2,200);
+        HashMap<Ingredient, Integer> testIngredientEmptyList = new HashMap<Ingredient,Integer>();
+        HashMap<Ingredient,Integer> testIngredientFilledList = new HashMap<Ingredient,Integer>();
+        testIngredientFilledList.put(testIngredient1,10);
+        testIngredientFilledList.put(testIngredient2,10000);
         testStarterEmptyIngredients = new Dish(1, "testDish", EFoodType.Starter, 1, false, testIngredientEmptyList);
         testStarterFilledIngredients = new Dish(2, "testDish2", EFoodType.Starter, 1, false, testIngredientFilledList);
         testMainFilledIngredients = new Dish(3, "TestDish3", EFoodType.Main, 1, false, testIngredientFilledList);

@@ -1,6 +1,6 @@
-package com.capgemini.View;
+package com.capgemini.view;
 
-import com.capgemini.Model.Ingredient;
+import com.capgemini.model.Ingredient;
 
 public class IngredientView {
     public void printIngredientListByName(Ingredient[] ingredients){
@@ -10,6 +10,6 @@ public class IngredientView {
     }
 
     public void printDetailsOfAnIngredient(Ingredient ingredient){
-        System.out.println("Ingredient: " + ingredient.getName() + " has the quantity " + ingredient.getQuantityInStorageInKiloGram() +" in storage, and the costprice i" );
+        System.out.println("Ingredient: " + ingredient.getName() + " has the quantity " + ingredient.getQuantityInStorageInKiloGram() +" in storage, and the buying price per gram is €" + ingredient.getPricePerGram() );
     }
 }

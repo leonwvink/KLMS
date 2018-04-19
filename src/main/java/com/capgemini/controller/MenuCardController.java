@@ -1,7 +1,7 @@
-package com.capgemini.Controller;
+package com.capgemini.controller;
 
-import com.capgemini.Model.MenuItem;
-import com.capgemini.View.MenuCard;
+import com.capgemini.model.MenuItem;
+import com.capgemini.view.MenuCard;
 
 public class MenuCardController {
 

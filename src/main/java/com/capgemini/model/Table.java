@@ -1,4 +1,4 @@
-package com.capgemini.Model;
+package com.capgemini.model;
 
 public class Table {
     private int number;

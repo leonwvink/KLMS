@@ -1,7 +1,7 @@
-package com.capgemini.View;
+package com.capgemini.view;
 
-import com.capgemini.Model.EFoodType;
-import com.capgemini.Model.MenuItem;
+import com.capgemini.model.EFoodType;
+import com.capgemini.model.MenuItem;
 
 public class MenuCard {
 

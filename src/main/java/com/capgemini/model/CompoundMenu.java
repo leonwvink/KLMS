@@ -1,11 +1,11 @@
-package com.capgemini.Model;
+package com.capgemini.model;
 
 public class CompoundMenu extends MenuItem {
     private MenuItem[] menuItems;
     private boolean veg;
 
-    public CompoundMenu(int itemNumber, String name, EFoodType foodType, double price, boolean veg, MenuItem[] menuItems) {
-        super(itemNumber, name, foodType, price);
+    public CompoundMenu(String name, EFoodType foodType, double price, boolean veg, MenuItem[] menuItems) {
+        super(name, foodType, price);
         this.veg = veg;
         this.menuItems=menuItems;
     }
@@ -37,5 +37,18 @@ public class CompoundMenu extends MenuItem {
             System.out.print(this.menuItems[this.menuItems.length - 1].getName());
             System.out.println(" ");
         }
+    }
+
+    @Override
+    public String toString(){
+        String compoundMenuInfo = super.toString();
+        if (this.menuItems != null) {
+            compoundMenuInfo= compoundMenuInfo + String.format("%23s","Consists of: "); //23 is 13 + 10 so it will start at the right place (13 is number of characters in Consists of:
+            for (int i = 0; i < this.menuItems.length-1; i++) {
+                compoundMenuInfo= compoundMenuInfo+ String.format(this.menuItems[i].getName() + ", ");
+            }
+           compoundMenuInfo = compoundMenuInfo + String.format(this.menuItems[this.menuItems.length - 1].getName())+ System.lineSeparator();
+        }
+        return compoundMenuInfo;
     }
 }

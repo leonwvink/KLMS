@@ -18,13 +18,14 @@ public class MenuCardController {
         updateView();
     }
 
-    public void addMenuItemToMenuCard(MenuItem menuItem) {
-        if (listContains(menuItem, this.menuCardList)) {
-            System.out.println(menuItem.getName() + " was already on the Menu card");
-        } else {
-            MenuItem[] newList = addMenuItemToList(menuItem, this.menuCardList);
-            this.menuCardList = newList;
-            // System.out.println(menuItem.getName() + "is added to the CompoundMenu card");
+    public void addMenuItemToMenuCard(MenuItem... menuItems) { //... so we can add one or multiple items
+        for (MenuItem menuItem: menuItems) {
+            if (listContains(menuItem, this.menuCardList)) {
+                System.out.println(menuItem.getName() + " was already on the Menu card");
+            } else {
+                MenuItem[] newList = addMenuItemToList(menuItem, this.menuCardList);
+                this.menuCardList = newList;
+            }
         }
     }
 

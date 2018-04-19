@@ -2,6 +2,7 @@ package com.capgemini.helpers;
 
 import com.capgemini.controller.IngredientController;
 import com.capgemini.controller.MenuCardController;
+import com.capgemini.controller.MenuItemController;
 import com.capgemini.model.*;
 
 import java.util.HashMap;
@@ -68,6 +69,11 @@ public class Dummy {
         //lasagne.setIngredient(ingredientString);
 
         MenuCardController menuCardController = new MenuCardController();
-        menuCardController.addMenuItemToMenuCard(ijs);
+        MenuItem[] menuCardList = { cola, fanta, salmonDish, soep, lasagne, ijs, spagetti, soep, compoundMenu2,compoundMenu1};
+        menuCardController.addMenuItemToMenuCard(menuCardList);
+
+        MenuItemController menuItemController = new MenuItemController();
+        MenuItem[] menuItems = {cola, fanta,sprite, salmonDish, salade, soep, lasagne, pasta, spagetti, ijs, taart};
+        menuItemController.regMenu(menuItems);
     }
 }

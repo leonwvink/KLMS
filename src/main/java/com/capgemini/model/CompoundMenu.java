@@ -7,7 +7,9 @@ public class CompoundMenu extends MenuItem {
     public CompoundMenu(String name, EFoodType foodType, double price, boolean veg, MenuItem[] menuItems) {
         super(name, foodType, price);
         this.veg = veg;
-        this.menuItems=menuItems;
+        this.menuItems = menuItems;
+
+
     }
 
     public boolean isVeg() {
@@ -26,12 +28,23 @@ public class CompoundMenu extends MenuItem {
         this.menuItems = menuItems;
     }
 
+
+    public void compoundMenuAdvisePrice() {
+        double temp = 0.0;
+        for (int i = 0; i < menuItems.length; i++) {
+            temp = temp + menuItems[i].getPrice();
+        }
+        super.setPrice(temp);
+
+    }
+
+
     @Override
-    public void  printMenuDetails(){
+    public void printMenuDetails() {
         super.printMenuDetails();
         if (this.menuItems != null) {
-            System.out.format("%23s","Consists of: "); //23 is 13 + 10 so it will start at the right place (13 is number of characters in Consists of:
-            for (int i = 0; i < this.menuItems.length-1; i++) {
+            System.out.format("%23s", "Consists of: "); //23 is 13 + 10 so it will start at the right place (13 is number of characters in Consists of:
+            for (int i = 0; i < this.menuItems.length - 1; i++) {
                 System.out.print(this.menuItems[i].getName() + ", ");
             }
             System.out.print(this.menuItems[this.menuItems.length - 1].getName());

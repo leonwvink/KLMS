@@ -20,11 +20,14 @@ public class MenuItemController extends BaseController {
         updateView();
     }
 
-    public void regMenu(MenuItem submittedItem) {
-        if (arrayContainsItemByName(submittedItem.getName(), allMenuItems)) {
-            //TODO: what should happen if we already have a dish with the same name
-        } else {
-            allMenuItems = addToArray(submittedItem, allMenuItems);
+    public void regMenu(MenuItem... submittedItems) {
+        for(MenuItem submittedItem : submittedItems) {
+            if (arrayContainsItemByName(submittedItem.getName(), allMenuItems)) {
+                System.out.println("There already exists an item with the name" + submittedItem.getName());
+                //TODO: what should happen if we already have a dish with the same name
+            } else {
+                allMenuItems = addToArray(submittedItem, allMenuItems);
+            }
         }
     }
 

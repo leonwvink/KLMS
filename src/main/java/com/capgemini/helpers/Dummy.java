@@ -65,8 +65,6 @@ public class Dummy {
         CompoundMenu compoundMenu1 = new CompoundMenu("Compound Menu 1", EFoodType.Menu, 3, false, menu1Items);
         CompoundMenu compoundMenu2 = new CompoundMenu("Compound Menu 2", EFoodType.Menu, 3, true, menu2Items);
         CompoundMenu compoundMenu3 = new CompoundMenu("Compound Menu 3", EFoodType.Menu,7.5,true,menu3Items);
-        //String [] ingredientString ={"pasta", "salt"};
-        //lasagne.setIngredient(ingredientString);
 
         MenuCardController menuCardController = new MenuCardController();
         MenuItem[] menuCardList = { cola, fanta, salmonDish, soep, lasagne, ijs, spagetti, soep, compoundMenu2,compoundMenu1};

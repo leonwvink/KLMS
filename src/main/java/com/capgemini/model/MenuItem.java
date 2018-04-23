@@ -9,9 +9,6 @@ public abstract class MenuItem extends NamedItem {
     private double price;
     private static AtomicLong idCounter = new AtomicLong();
 
-
-
-
     public MenuItem(String name, EFoodType foodType, double price) {
         super(name);
         this.itemNumber = generateUniqueItemNumber();

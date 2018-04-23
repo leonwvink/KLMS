@@ -1,24 +1,15 @@
-package com.capgemini.Model;
+package com.capgemini.model;
 
-public class Ingredient {
+public class Ingredient extends NamedItem {
 
-    private String name;
     private double pricePerGram;
     private int quantityInStorageInKiloGram;
 
 
     public Ingredient(String name, double pricePerGram, int quantityInStorageInKiloGram) {
-        this.name = name;
+        super(name);
         this.pricePerGram = pricePerGram;
         this.quantityInStorageInKiloGram = quantityInStorageInKiloGram;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public double getPricePerGram() {

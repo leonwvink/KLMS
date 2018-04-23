@@ -1,4 +1,4 @@
-package com.capgemini.Model;
+package com.capgemini.model;
 
 public enum EFoodType {
     Starter("Starter"),

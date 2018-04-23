@@ -12,9 +12,7 @@ public class App {
         generateDummyData();
         Table table = new Table(1);
         Order order = new Order();
-
     }
-
 
 
 }

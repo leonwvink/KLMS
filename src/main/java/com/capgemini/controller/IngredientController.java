@@ -3,7 +3,6 @@ package com.capgemini.controller;
 import com.capgemini.model.Ingredient;
 import com.capgemini.view.IngredientView;
 
-
 public class IngredientController extends BaseController {
     private Ingredient[] allIngredients;
     private IngredientView view = new IngredientView();
@@ -42,7 +41,11 @@ public class IngredientController extends BaseController {
 
     @Override
     protected Ingredient[] addToArray(Object newIngredient, Object[] localIngredientList) {
-        Ingredient[] newList = (Ingredient[])super.addToArray(newIngredient,localIngredientList);
-        return newList;
+        Object[] newList = super.addToArray(newIngredient,localIngredientList);
+        Ingredient[] newList2 = new Ingredient[newList.length];
+        for(int i=0; i<newList.length; i++){
+            newList2[i]=(Ingredient)newList[i];
+        }
+        return newList2;
     }
 }

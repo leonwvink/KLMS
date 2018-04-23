@@ -33,8 +33,12 @@ public class MenuItemController extends BaseController {
 
     @Override
     protected MenuItem[] addToArray(Object localMenuItem, Object[] localMenuItemList) {
-        allMenuItems = (MenuItem[])super.addToArray(localMenuItem, localMenuItemList);
-        return allMenuItems;
+        Object[] newList = super.addToArray(localMenuItem, localMenuItemList);
+        MenuItem[] newList2 = new MenuItem[newList.length];
+        for (int i = 0; i < newList.length; i++) {
+            newList2[i] = (MenuItem)newList[i];
+        }
+        return newList2;
     }
 
 }

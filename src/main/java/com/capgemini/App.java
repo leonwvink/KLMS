@@ -90,8 +90,20 @@ public class App {
         menuCard.addMenuItemToMenuCard(compoundMenu3);
 
 
-        menuCard.generateMenuCard();
+        Order order = new Order();
+        OrderItem first = new OrderItem(1, cola);
+        OrderItem second = new OrderItem(1, cola);
 
+        order.addToOrder(first);
+        order.addToOrder(second);
+
+
+        menuCard.generateMenuCard();
+        order.generateOrder();
+
+        //Print printing = new Print();
+        //printing.generateOrder();
+        //printing.generateMenuCard();
     }
 
 

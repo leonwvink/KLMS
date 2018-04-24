@@ -1,9 +1,8 @@
-package com.capgemini.Model;
+package com.capgemini.model;
 
 public class OrderItem {
     private int quantity;
     private MenuItem menuitem;
-
 
     public OrderItem(int quantity, MenuItem menuitem) {
         this.quantity = quantity;
@@ -26,8 +25,12 @@ public class OrderItem {
         this.menuitem = menuitem;
     }
 
+    @Override
+    public String toString() {
+        return String.format("%-2s%-70s \n",getQuantity(), getMenuitem().getName());
+    }
+
     public void printDetails(){
         System.out.format("%-2s%-70s \n",getQuantity(), getMenuitem().getName()); //- means left align, numbers mean characters, the size will fill out completely
-
     }
 }

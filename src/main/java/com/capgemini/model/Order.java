@@ -1,43 +1,61 @@
 package com.capgemini.model;
 
+
+import com.capgemini.model.OrderItem;
+
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicLong;
 
 
 public class Order {
 
-    private int table = 1;
-    private int id;
+    private int table;
+    private static AtomicLong id;
     private Timestamp orderTime;
-    private ArrayList<OrderItem> orderItemList = new ArrayList<>();
+    private ArrayList<OrderItem> orderItemList;
 
-
-    public void generateOrder() {
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-
-        System.out.println("Order from table " + table + " | " + timestamp);
-        System.out.println("______________ ");
-        System.out.println(" ");
-        for (OrderItem item : orderItemList) {
-            item.printDetails();
-            System.out.println("______________ ");
-        }
+    public Order(int table,  ArrayList<OrderItem> orderItemList) {
+        this.table = table;
+        this.id = id;
+        this.orderTime = new Timestamp(System.currentTimeMillis());
+        this.orderItemList = orderItemList;
     }
 
+    public int getTable() {
+        return table;
+    }
 
-    public void addToOrder(OrderItem item) {
-        if (orderItemList.isEmpty()) {
-            orderItemList.add(item);
-        } else {
-            for (OrderItem type : orderItemList) {
-                if (type.getMenuitem() == item.getMenuitem()) {
-                    type.setQuantity(type.getQuantity() + 1);
-                } else {
-                    orderItemList.add(item);
-                }
-            }
+    public void setTable(int table) {
+        this.table = table;
+    }
 
+    public AtomicLong getId() {
+        return id;
+    }
 
-        }
+    private void setId(AtomicLong id) {
+        this.id = id;
+    }
+
+    public Timestamp getOrderTime() {
+        return orderTime;
+    }
+
+    public void setOrderTime(Timestamp orderTime) {
+        this.orderTime = orderTime;
+    }
+
+    public ArrayList<OrderItem> getOrderItemList() {
+        return orderItemList;
+    }
+
+    public void setOrderItemList(ArrayList<OrderItem> orderItemList) {
+        this.orderItemList = orderItemList;
+    }
+
+    public static long generateUniqueItemNumber()
+    {
+        return id.getAndIncrement();
     }
 }

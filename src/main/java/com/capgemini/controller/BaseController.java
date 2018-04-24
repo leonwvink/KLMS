@@ -4,7 +4,6 @@ import com.capgemini.model.NamedItem;
 
 public class BaseController {
 
-
     protected Object[] addToArray(Object newObject, Object[] localObjectList) {
         Object[] newList;
         if (localObjectList == null) {          //it it is empty we will need a new list

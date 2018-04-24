@@ -32,18 +32,6 @@ public class Dish extends MenuItem {
         this.ingredient = ingredient;
     }
 
-    @Override
-    public void printMenuDetails() {
-        super.printMenuDetails();
-        if (ingredient != null && ingredient.length != 0) {
-            System.out.format("%22s", "Ingredient: ");
-            for (int i = 0; i < this.ingredient.length - 1; i++) {
-                System.out.print(this.ingredient[i].getName() + ", ");
-            }
-            System.out.print(this.ingredient[this.ingredient.length - 1].getName());
-            System.out.println(" ");
-        }
-    }
 
     @Override
     public String toString() {

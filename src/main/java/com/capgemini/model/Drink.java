@@ -6,5 +6,4 @@ public class Drink extends MenuItem{
         super(name, foodType, price);
     }
 
-
 }

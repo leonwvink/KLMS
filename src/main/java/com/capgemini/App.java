@@ -1,6 +1,7 @@
 package com.capgemini;
 
 import com.capgemini.model.*;
+import com.capgemini.model.Order;
 
 import static com.capgemini.helpers.Dummy.generateDummyData;
 

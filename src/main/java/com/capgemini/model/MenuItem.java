@@ -20,7 +20,7 @@ public abstract class MenuItem extends NamedItem {
         return itemNumber;
     }
 
-    private void setItemNumber(int itemNumber) {
+    private void setItemNumber(long itemNumber) {
         this.itemNumber = itemNumber;
     }
 
@@ -38,10 +38,6 @@ public abstract class MenuItem extends NamedItem {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public void printMenuDetails(){
-        System.out.format("%-10s%-70s%-2s%-7.2f \n",getItemNumber(), getName(), "€", getPrice());
     }
 
     public static long generateUniqueItemNumber()

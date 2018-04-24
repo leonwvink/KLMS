@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern="IeTS" type="PLAIN_TEXT" />
       <mapping pattern="Dish" type="PLAIN_TEXT" />
     </extensionMap>
   </component>

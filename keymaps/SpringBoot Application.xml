@@ -1,0 +1,5 @@
+<keymap version="1" name="SpringBoot Application" parent="$default">
+  <action id="Macro.Save &amp; Make Project">
+    <keyboard-shortcut first-keystroke="ctrl s" />
+  </action>
+</keymap>
